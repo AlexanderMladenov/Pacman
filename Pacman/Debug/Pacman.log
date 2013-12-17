@@ -1,0 +1,31 @@
+﻿Build started 18.12.2013 г. 00:59:18 ч..
+     1>Project "D:\Projects\Pacman\Pacman\Pacman\Pacman.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files\Visual Studio 2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Ghost.cpp
+         Ghost.cpp
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(102): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(111): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(119): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(127): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(192): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(201): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(209): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(217): warning C4244: 'argument' : conversion from 'size_t' to 'float', possible loss of data
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(248): warning C4715: 'Pacman::RedGhost::UpdateTarget' : not all control paths return a value
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(278): warning C4715: 'Pacman::OrangeGhost::UpdateTarget' : not all control paths return a value
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(326): warning C4715: 'Pacman::PinkGhost::UpdateTarget' : not all control paths return a value
+     1>d:\projects\pacman\pacman\pacman\ghost.cpp(393): warning C4715: 'Pacman::BlueGhost::UpdateTarget' : not all control paths return a value
+       Link:
+         D:\Program Files\Visual Studio 2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Projects\Pacman\Pacman\Debug\Pacman.exe" /INCREMENTAL /NOLOGO SDL.lib SDLmain.lib SDL_image.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Projects\Pacman\Pacman\Debug\Pacman.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Projects\Pacman\Pacman\Debug\Pacman.lib" /MACHINE:X86 Debug\Main.obj
+         Debug\PowerUp.obj
+         Debug\Ghost.obj
+         Debug\Pacman.obj
+         Debug\SDLInput.obj
+         Debug\SDLRenderer.obj
+         Debug\Timer.obj
+         Pacman.vcxproj -> D:\Projects\Pacman\Pacman\Debug\Pacman.exe
+     1>Done Building Project "D:\Projects\Pacman\Pacman\Pacman\Pacman.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.01
