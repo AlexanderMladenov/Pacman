@@ -60,6 +60,7 @@ int main(int argc, char* args[])
 
 	std::set<std::shared_ptr< Pacman::PowerObj>> powerUps; // set of the 4 powerups. Exists for easier iterartion trought them
 	std::vector<std::shared_ptr<Pacman::Ghost>> ghosts{ blinky, pinky, inky, clyde }; // vector of all the ghosts. Exists for easier iteration between them
+	int coinNumber = 0; // number of total coins in level
 
 	//different asset surfaces
 	Pacman::SDLSurface pacmanSurface("Assets\\pacman.png");
@@ -70,6 +71,7 @@ int main(int argc, char* args[])
 	Pacman::SDLSurface frightenedGhostSurface("Assets\\frightGhost.png");
 	Pacman::SDLSurface ghostEyesSurface("Assets\\ghostEyes.png");
 	Pacman::SDLSurface powerUpSurface("Assets\\powerup.png");
+	Pacman::SDLSurface endGameSurface("Assets\\win.png");
 
 	Pacman::Tilemap tilemap(19, 23); // create a tilemap
 
@@ -80,6 +82,7 @@ int main(int argc, char* args[])
 			if (level[x + y * 19] == '#')
 			{
 				tilemap.Set(x, y, Pacman::Coin);
+				coinNumber += 1;
 			}
 			else if (level[x + y * 19] == '@')
 			{
@@ -147,6 +150,14 @@ int main(int argc, char* args[])
 		clyde->Update(tilemap, deltaTime);
 
 		collisions.ResolveCollisions(); //resolve collision between them
+
+		if (pacman->GetPoints() >= coinNumber) // if all coins collected
+		{
+			renderer.Blit(endGameSurface, 0, 0);// apply win png 
+			renderer.Show();// show win png
+			SDL_Delay(8000);// wain 8 secs
+			exit(0);//exit
+		}
 
 		if (pacman->GetState() == Pacman::PacState::Dead) // if ghosts caught the pacman, reset the level
 		{

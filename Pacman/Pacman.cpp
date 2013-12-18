@@ -142,7 +142,7 @@ namespace Pacman
 		{
 			if (i.type == Coin) // if its a coin
 			{
-				++m_Points; // increase points
+				m_Points += 1; // increase points
 				tilemap.Set(i.x, i.y, Empty); //remove coin 
 				tileSurface->Clear(); // clear tilemap render
 				tileSurface->RenderTileset(gridSurf, tilemap.GetGrid(), 19, 32.0f);// re - render the grid without the coin.

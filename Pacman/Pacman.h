@@ -26,9 +26,11 @@ namespace Pacman
 
 		inline const Point& GetPosition() const{ return m_Position; }//get the pacman position
 
-		Direction GetDirection() const { return m_CurrentDirection; } // get the pacman's direction. mostly used in Pinky
+		inline Direction GetDirection() const { return m_CurrentDirection; } // get the pacman's direction. mostly used in Pinky
 
-		PacState GetState() const  { return m_State; }; //return the state
+		inline PacState GetState() const  { return m_State; }; //return the state
+
+		inline int GetPoints() const { return m_Points; }
 
 
 		Rect GetRect() const override { return Rect(m_Position.x + 0.05f, m_Position.y + 0.05f, 0.9f, 0.9f); } 	//returns a collision rect
