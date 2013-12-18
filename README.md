@@ -1,12 +1,17 @@
 Current Features:
 
 Ghost AI and targeting is based on orgininal rules and is almost the same.
+
 Cool win png if all coins are collected.
-Life system that functions by having pacman and the ghosts reset each time they catch him (2 lives only)
+
+Life system that functions by having pacman and the ghosts reset each time they catch him (2 lives only).
+
 Power up will cause ghosts to choose random tiles using Mersenne Twister random gen.
-Movement is frame independent
+
+Movement is frame independent.
 Collision between ghosts and player is done by seperate collision interface.
-Tilemap is rendered seperatly in order to improve performce
+
+Tilemap is rendered seperatly in order to improve performce.
 
 Current Issues:
 
